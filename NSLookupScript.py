@@ -3,7 +3,7 @@ import subprocess
 import csv
 
 # Input Excel file and output CSV file
-input_file = "gouda.xlsx"
+input_file = "input.xlsx"
 output_file = "nslookup_results.csv"
 
 # Read Excel file
@@ -64,5 +64,6 @@ with open(output_file, mode="w", newline="") as csvfile:
             "source.ips": data["ips"],           # Writes as Python-style list
             "nslookup_results": data["hosts"]    # Writes as Python-style list
         })
+
 
 print(f"✅ Done! Results saved to {output_file}")
